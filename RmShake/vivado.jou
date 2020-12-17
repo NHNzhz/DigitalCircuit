@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Dec  9 19:40:02 2020
+# Process ID: 15304
+# Current directory: D:/vivadoprog/RmShake
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1588 D:\vivadoprog\RmShake\RmShake.xpr
+# Log file: D:/vivadoprog/RmShake/vivado.log
+# Journal file: D:/vivadoprog/RmShake\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivadoprog/RmShake/RmShake.xpr
