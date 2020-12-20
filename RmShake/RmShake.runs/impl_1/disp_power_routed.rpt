@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Wed Dec  9 23:49:08 2020
+| Date             : Sun Dec 20 10:19:30 2020
 | Host             : LAPTOP-7J1GTMB0 running 64-bit major release  (build 9200)
 | Command          : report_power -file disp_power_routed.rpt -pb disp_power_summary_routed.pb -rpx disp_power_routed.rpx
 | Design           : disp
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.336        |
+| Total On-Chip Power (W)  | 4.342        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.224        |
+| Dynamic (W)              | 4.230        |
 | Device Static (W)        | 0.112        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 80.2         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.206 |       82 |       --- |             --- |
-|   LUT as Logic |     0.172 |       34 |     63400 |            0.05 |
+| Slice Logic    |     0.207 |       83 |       --- |             --- |
+|   LUT as Logic |     0.174 |       35 |     63400 |            0.06 |
 |   Register     |     0.016 |       33 |    126800 |            0.03 |
 |   CARRY4       |     0.012 |        5 |     15850 |            0.03 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     0.225 |       65 |       --- |             --- |
+| Signals        |     0.230 |       66 |       --- |             --- |
 | I/O            |     3.793 |       11 |       210 |            5.24 |
 | Static Power   |     0.112 |          |           |                 |
-| Total          |     4.336 |          |           |                 |
+| Total          |     4.342 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.471 |       0.439 |      0.032 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.477 |       0.445 |      0.032 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.330 |       0.310 |      0.020 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,9 +138,9 @@ Table of Contents
 +--------+-----------+
 | Name   | Power (W) |
 +--------+-----------+
-| disp   |     4.224 |
-|   ut   |     0.268 |
-|     ut |     0.248 |
+| disp   |     4.230 |
+|   ut   |     0.278 |
+|     ut |     0.258 |
 +--------+-----------+
 
 

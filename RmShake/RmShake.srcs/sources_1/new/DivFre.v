@@ -29,14 +29,14 @@ module DivFre(
     parameter num = 1_000_000;
     always @(negedge _rst or posedge clk_in)
     begin
-        if(~_rst) begin n=20'b0;clk_out=0; end
+        if(~_rst) begin n<=20'b0;clk_out<=0; end
         else
         begin
             if(n<num) n=n+1'b1;
             else
             begin
-                n=0;
-                clk_out=~clk_out;
+                n<=0;
+                clk_out<=~clk_out;
             end
         end
     end
