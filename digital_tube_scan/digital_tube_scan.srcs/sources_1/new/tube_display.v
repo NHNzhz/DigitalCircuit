@@ -39,14 +39,6 @@ module tube_display(
         .clk_in(clk_100M),
         .clk_out(clk_P)
     );
-    //Ccount ut1(._rst(_rst),.clk(clk_P),.Q(tdata[3:0]),.CO(CO[0]));
-    //Ccount ut2(._rst(_rst),.clk(CO[0]),.Q(tdata[7:4]),.CO(CO[1]));
-    //Ccount ut3(._rst(_rst),.clk(CO[1]),.Q(tdata[11:8]),.CO(CO[2]));
-    //Ccount ut4(._rst(_rst),.clk(CO[2]),.Q(tdata[15:12]),.CO(CO[3]));
-    //Ccount ut5(._rst(_rst),.clk(CO[3]),.Q(tdata[19:16]),.CO(CO[4]));
-    //Ccount ut6(._rst(_rst),.clk(CO[4]),.Q(tdata[23:20]),.CO(CO[5]));
-    //Ccount ut7(._rst(_rst),.clk(CO[5]),.Q(tdata[27:24]),.CO(CO[6]));
-    //Ccount ut8(._rst(_rst),.clk(CO[6]),.Q(tdata[31:28]),.CO(CO[7]));
     always @(negedge _rst or posedge clk_P)
     begin
     if(~_rst) begin data[31:0]<=0;CO<=0;end
