@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-2L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8140
+INFO: [Synth 8-7075] Helper process launched with PID 6500
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'tube_display' [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:22]
 	Parameter limit bound to: 4'b1010 
@@ -29,29 +29,29 @@ INFO: [Synth 8-6155] done synthesizing module 'DivFreD' (1#1) [D:/vivadoprog/dig
 INFO: [Synth 8-6157] synthesizing module 'DivFreP' [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/DivFreq.v:23]
 	Parameter num bound to: 10000000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'DivFreP' (2#1) [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/DivFreq.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:92]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:106]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:120]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:134]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:148]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:162]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:176]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:190]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:90]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:93]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:107]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:121]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:135]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:149]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:163]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:177]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:191]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:91]
 INFO: [Synth 8-6155] done synthesizing module 'tube_display' (3#1) [D:/vivadoprog/digital_tube_scan/digital_tube_scan.srcs/sources_1/new/tube_display.v:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1014.020 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -65,29 +65,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/tube_display_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1014.020 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -130,25 +130,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -166,37 +166,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -215,38 +215,37 @@ Report Cell Usage:
 |1     |BUFG   |     2|
 |2     |CARRY4 |    10|
 |3     |LUT1   |     2|
-|4     |LUT2   |     9|
-|5     |LUT3   |     7|
+|4     |LUT2   |     3|
+|5     |LUT3   |    15|
 |6     |LUT4   |    49|
 |7     |LUT5   |    53|
 |8     |LUT6   |    67|
 |9     |MUXF7  |     4|
-|10    |FDCE   |    88|
-|11    |FDPE   |     1|
-|12    |FDSE   |     8|
-|13    |IBUF   |     2|
-|14    |OBUF   |    16|
+|10    |FDCE   |    89|
+|11    |FDPE   |     8|
+|12    |IBUF   |     2|
+|13    |OBUF   |    16|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.453 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1014.020 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1014.020 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1014.020 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1031.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1014.020 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 30 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1031.453 ; gain = 17.586
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1014.020 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/vivadoprog/digital_tube_scan/digital_tube_scan.runs/synth_1/tube_display.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file tube_display_utilization_synth.rpt -pb tube_display_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 23 13:31:45 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 24 00:02:40 2020...

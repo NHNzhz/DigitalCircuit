@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Dec 23 13:32:18 2020
+| Date         : Thu Dec 24 00:03:15 2020
 | Host         : LAPTOP-7J1GTMB0 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file tube_display_control_sets_placed.rpt
 | Design       : tube_display
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    13 |
-|    Minimum number of control sets                        |    13 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    47 |
+| Unused register locations in slices containing registers |    39 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    13 |
-| >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     9 |
+| Total control sets |    11 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     7 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     1 |
+| >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     1 |
@@ -59,11 +59,11 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              54 |           27 |
+| No           | No                    | Yes                    |              62 |           26 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              35 |           14 |
-| Yes          | Yes                   | No                     |               8 |            3 |
+| Yes          | No                    | Yes                    |              35 |           17 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,19 +73,17 @@ Table of Contents
 +---------------------+----------------------+------------------+------------------+----------------+--------------+
 |     Clock Signal    |     Enable Signal    | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +---------------------+----------------------+------------------+------------------+----------------+--------------+
-|  utd/clk_out        |                      | utp/_rst         |                3 |              3 |         1.00 |
-|  CO_reg[7]_i_2_n_0  | data[15]_i_1_n_0     | utp/_rst         |                2 |              4 |         2.00 |
-|  CO_reg[7]_i_2_n_0  | data[27]_i_1_n_0     | utp/_rst         |                1 |              4 |         4.00 |
 |  CO_reg[7]_i_2_n_0  | data_reg[23]_i_1_n_0 | utp/_rst         |                2 |              4 |         2.00 |
+|  CO_reg[7]_i_2_n_0  | data[15]_i_1_n_0     | utp/_rst         |                2 |              4 |         2.00 |
+|  CO_reg[7]_i_2_n_0  | data[27]_i_1_n_0     | utp/_rst         |                3 |              4 |         1.33 |
+|  CO_reg[7]_i_2_n_0  | p_4_out1_out[17]     | utp/_rst         |                2 |              4 |         2.00 |
 |  CO_reg[7]_i_2_n_0  | p_4_out[9]           | utp/_rst         |                1 |              4 |         4.00 |
 |  CO_reg[7]_i_2_n_0  | p_4_out[1]           | utp/_rst         |                1 |              4 |         4.00 |
-|  CO_reg[7]_i_2_n_0  | p_4_out[5]           | utp/_rst         |                1 |              4 |         4.00 |
-|  CO_reg[7]_i_2_n_0  | p_4_out1_out[17]     | utp/_rst         |                2 |              4 |         2.00 |
-|  utd/clk_out        | _rst_IBUF            | An[6]_i_1_n_0    |                2 |              4 |         2.00 |
-|  utd/clk_out        | _rst_IBUF            | An[7]_i_1_n_0    |                1 |              4 |         4.00 |
-|  utd/clk_out        | res0                 | utp/_rst         |                4 |              7 |         1.75 |
+|  CO_reg[7]_i_2_n_0  | p_4_out[5]           | utp/_rst         |                2 |              4 |         2.00 |
+|  utd/CLK            | res0                 | utp/_rst         |                4 |              7 |         1.75 |
+|  utd/CLK            |                      | utp/_rst         |                3 |             11 |         3.67 |
 |  CO_reg[7]_i_2_n_0  |                      | utp/_rst         |                8 |             11 |         1.38 |
-|  clk_100M_IBUF_BUFG |                      | utp/_rst         |               16 |             40 |         2.50 |
+|  clk_100M_IBUF_BUFG |                      | utp/_rst         |               15 |             40 |         2.67 |
 +---------------------+----------------------+------------------+------------------+----------------+--------------+
 
 

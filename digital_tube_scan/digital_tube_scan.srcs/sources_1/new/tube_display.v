@@ -73,6 +73,7 @@ module tube_display(
         if(~_rst) begin
             bit_sel=0;
             res=8'b00000011;
+            An=8'b11111110;
         end
         else
         begin

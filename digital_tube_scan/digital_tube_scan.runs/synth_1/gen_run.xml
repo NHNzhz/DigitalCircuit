@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-2L" LaunchTime="1608701466">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-2L" LaunchTime="1608739310">
   <File Type="PA-TCL" Name="tube_display.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="tube_display_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="tube_display_reports.tcl"/>
