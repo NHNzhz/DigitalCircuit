@@ -32,7 +32,7 @@ module DivFre(
         if(~_rst) begin n<=20'b0;clk_out<=0; end
         else
         begin
-            if(n<num) n=n+1'b1;
+            if(n<num) n<=n+1'b1;
             else
             begin
                 n<=0;
