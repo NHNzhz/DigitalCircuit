@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Dec 20 10:19:30 2020
+| Date         : Wed Dec 23 17:20:50 2020
 | Host         : LAPTOP-7J1GTMB0 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file disp_timing_summary_routed.rpt -pb disp_timing_summary_routed.pb -rpx disp_timing_summary_routed.rpx -warn_on_violation
 | Design       : disp
@@ -42,7 +42,7 @@ Table of Contents
 1. checking no_clock (33)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (85)
+4. checking unconstrained_internal_endpoints (65)
 5. checking no_input_delay (2)
 6. checking no_output_delay (8)
 7. checking multiple_clock (0)
@@ -71,9 +71,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (85)
+4. checking unconstrained_internal_endpoints (65)
 -------------------------------------------------
- There are 85 pins that are not constrained for maximum delay. (HIGH)
+ There are 65 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
