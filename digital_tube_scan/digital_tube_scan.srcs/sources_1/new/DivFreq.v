@@ -26,17 +26,17 @@ module DivFreP(
     input _rst,clk_in;
     output reg clk_out;
     reg [24:0] n;
-    parameter num = 2_000_0000;
+    parameter num = 1_000_0000;
     always @(negedge _rst or posedge clk_in)
     begin
-        if(~_rst) begin n=24'b0;clk_out=0; end
+        if(~_rst) begin n<=24'b0;clk_out<=0; end
         else
         begin
-            if(n<num) n=n+1'b1;
+            if(n<num) n<=n+1'b1;
             else
             begin
-                n=0;
-                clk_out=~clk_out;
+                n<=0;
+                clk_out<=~clk_out;
             end
         end
     end
@@ -51,14 +51,14 @@ module DivFreD(
     parameter num = 1_00_00;
     always @(negedge _rst or posedge clk_in)
     begin
-        if(~_rst) begin n=20'b0;clk_out=0; end
+        if(~_rst) begin n<=20'b0;clk_out<=0; end
         else
         begin
-            if(n<num) n=n+1'b1;
+            if(n<num) n<=n+1'b1;
             else
             begin
-                n=0;
-                clk_out=~clk_out;
+                n<=0;
+                clk_out<=~clk_out;
             end
         end
     end
