@@ -41,17 +41,19 @@ module DivFreq_Display(
     end
 endmodule
 
-module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
+module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
     input [31:0] A,B;
     input [3:0] ALU_OP;
-    output reg [32:0] F;
+    output reg [31:0] res_F;
     output reg ZF,SF,CF,OF;
+    reg [32:0] F;
     parameter ADD=4'b0000,SLL=4'b0001,SLT=4'b0010,SLTU=4'b0011,XOR=4'b0100,SRL=4'b0101,OR=4'b0110,AND=4'b0111,SUB=4'b1000,SRA=4'b1001;
     always @(*)
     begin
         case (ALU_OP)
             ADD:begin
                 F<=A+B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=F[32];
@@ -59,6 +61,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             SLL:begin
                 F<=A<<B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=A[31];
@@ -66,6 +69,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             SLT:begin
                 F<=($signed (A) < $signed (B))?1:0;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
@@ -73,6 +77,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             SLTU:begin
                 F<=(A<B)?1:0;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
@@ -80,6 +85,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             XOR:begin
                 F<=A^B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
@@ -87,6 +93,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             SRL:begin   
                 F<=A>>B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
@@ -94,6 +101,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             OR:begin
                 F<=A|B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
@@ -101,6 +109,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             AND:begin
                 F<=A&B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
@@ -108,6 +117,7 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             SUB:begin
                 F<=A-B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=F[32];
@@ -115,13 +125,14 @@ module ALU(A,B,ALU_OP,F,ZF,SF,CF,OF);
             end
             SRA:begin
                 F<=$signed(A)>>>B;
+                res_F<=F[31:0];
                 ZF<=(F|0)?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
             end
             default:begin
-                F<=F;
+                res_F<=res_F;
                 ZF<=ZF;
                 SF<=SF;
                 CF<=CF;
@@ -137,7 +148,7 @@ module ALU_main(clk_100M,_clk_A,_clk_B,_clk_F,_rst,swtch,An,res,led);
     output reg [7:0] An,res;
     output reg [3:0] led;
     wire clk_D;
-    wire [32:0] res_F;
+    wire [31:0] res_F;
     wire [3:0] res_led;
     reg [31:0] data;
     reg [31:0] A,B;
@@ -169,7 +180,7 @@ module ALU_main(clk_100M,_clk_A,_clk_B,_clk_F,_rst,swtch,An,res,led);
         end
     end
 
-    ALU(.A(A),.B(B),.ALU_OP(swtch[19:16]),.F(res_F),.ZF(res_led[3]),.SF(res_led[2]),.CF(res_led[1]),.OF(res_led[0]));
+    ALU(.A(A),.B(B),.ALU_OP(swtch[19:16]),.res_F(res_F),.ZF(res_led[3]),.SF(res_led[2]),.CF(res_led[1]),.OF(res_led[0]));
 
     always @(negedge _rst or negedge _clk_F)
     begin
