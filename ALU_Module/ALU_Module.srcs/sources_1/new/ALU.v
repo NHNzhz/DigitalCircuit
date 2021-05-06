@@ -48,13 +48,25 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
     output reg ZF,SF,CF,OF;
     reg [32:0] F;
     parameter ADD=4'b0000,SLL=4'b0001,SLT=4'b0010,SLTU=4'b0011,XOR=4'b0100,SRL=4'b0101,OR=4'b0110,AND=4'b0111,SUB=4'b1000,SRA=4'b1001;
+    /*
+    ADD:加法
+    SLL:左移
+    SLT:有符号数比较
+    SLTU:无符号数比较
+    XOR:异或
+    SRL:逻辑右移
+    OR:按位或
+    AND:按位与
+    SUB:减法
+    SRA:算术右移
+    */
     always @(*)
     begin
         case (ALU_OP)
             ADD:begin
                 F<=A+B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=F[32];
                 OF<=(~A[31]&~B[31]&F[31])|(A[31]&B[31]&~F[31]);
@@ -62,15 +74,15 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             SLL:begin
                 F<=A<<B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
-                CF<=A[31];
-                OF<=A[31]^A[30];
+                CF<=F[32];
+                OF<=B?(A[31]^A[30]):0;
             end
             SLT:begin
                 F<=($signed (A) < $signed (B))?1:0;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -78,7 +90,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             SLTU:begin
                 F<=(A<B)?1:0;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -86,7 +98,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             XOR:begin
                 F<=A^B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -94,7 +106,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             SRL:begin   
                 F<=A>>B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -102,7 +114,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             OR:begin
                 F<=A|B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -110,7 +122,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             AND:begin
                 F<=A&B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -118,7 +130,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             SUB:begin
                 F<=A-B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=F[32];
                 OF<=(~A[31]&B[31]&F[31])|(A[31]&~B[31]&~F[31]);
@@ -126,7 +138,7 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
             SRA:begin
                 F<=$signed(A)>>>B;
                 res_F<=F[31:0];
-                ZF<=(F|0)?0:1;
+                ZF<=res_F?0:1;
                 SF<=F[31];
                 CF<=0;
                 OF<=0;
@@ -142,58 +154,11 @@ module ALU(A,B,ALU_OP,res_F,ZF,SF,CF,OF);
     end
 endmodule
 
-module ALU_main(clk_100M,_clk_A,_clk_B,_clk_F,_rst,swtch,An,res,led);
-    input clk_100M,_clk_A,_clk_B,_clk_F,_rst;
-    input [19:0] swtch;
+module tubeDisplay(_rst,clk_D,data,An,res);
+    input _rst,clk_D;
+    input [31:0] data;
     output reg [7:0] An,res;
-    output reg [3:0] led;
-    wire clk_D;
-    wire [31:0] res_F;
-    wire [3:0] res_led;
-    reg [31:0] data;
-    reg [31:0] A,B;
     reg [2:0] bit_sel;
-    DivFreq_Display(._rst(_rst),.clk_in(clk_100M),.clk_out(clk_D));
-    always @(negedge _rst or negedge _clk_A)
-    begin
-        if(~_rst) begin
-            A<=0;
-        end
-        else if(~swtch[19]) begin
-            A[15:0]<=swtch[15:0];
-        end
-        else begin
-            A[31:16]<=swtch[15:0];
-        end
-    end
-
-    always @(negedge _rst or negedge _clk_B)
-    begin
-        if(~_rst) begin
-            B<=0;
-        end
-        else if(~swtch[19]) begin
-            B[15:0]<=swtch[15:0];
-        end
-        else begin
-            B[31:16]<=swtch[15:0];
-        end
-    end
-
-    ALU(.A(A),.B(B),.ALU_OP(swtch[19:16]),.res_F(res_F),.ZF(res_led[3]),.SF(res_led[2]),.CF(res_led[1]),.OF(res_led[0]));
-
-    always @(negedge _rst or negedge _clk_F)
-    begin
-        if(~_rst) begin
-            data<=0;
-            led<=0;
-        end
-        else begin
-            data<=res_F[31:0];
-            led<=res_led;
-        end
-    end
-
     integer pls;
     always @(negedge _rst or posedge clk_D) begin
         if(~_rst) begin
@@ -234,4 +199,58 @@ module ALU_main(clk_100M,_clk_A,_clk_B,_clk_F,_rst,swtch,An,res,led);
             endcase
         end
     end
+endmodule
+
+module ALU_main(clk_100M,_clk_A,_clk_B,_clk_F,_rst,swtch,An,res,led);
+    input clk_100M,_clk_A,_clk_B,_clk_F,_rst;
+    input [19:0] swtch;
+    output [7:0] An,res;
+    output reg [3:0] led;
+    wire clk_D;
+    wire [31:0] res_F;
+    wire [3:0] res_led;
+    reg [31:0] data;
+    reg [31:0] A,B;
+    reg [2:0] bit_sel;
+    DivFreq_Display(._rst(_rst),.clk_in(clk_100M),.clk_out(clk_D));
+
+    always @(negedge _rst or negedge _clk_A)
+    begin
+        if(~_rst) begin
+            A<=0;
+        end
+        else if(~swtch[19]) begin
+            A[15:0]<=swtch[15:0];
+        end
+        else begin
+            A[31:16]<=swtch[15:0];
+        end
+    end
+
+    always @(negedge _rst or negedge _clk_B)
+    begin
+        if(~_rst) begin
+            B<=0;
+        end
+        else if(~swtch[19]) begin
+            B[15:0]<=swtch[15:0];
+        end
+        else begin
+            B[31:16]<=swtch[15:0];
+        end
+    end
+    ALU(.A(A),.B(B),.ALU_OP(swtch[19:16]),.res_F(res_F),.ZF(res_led[3]),.SF(res_led[2]),.CF(res_led[1]),.OF(res_led[0]));
+    always @(negedge _rst or negedge _clk_F)
+    begin
+        if(~_rst) begin
+            data<=0;
+            led<=0;
+        end
+        else begin
+            data<=res_F;
+            led<=res_led;
+        end
+    end
+
+    tubeDisplay(._rst(_rst),.clk_D(clk_D),.data(data),.An(An),.res(res));
 endmodule

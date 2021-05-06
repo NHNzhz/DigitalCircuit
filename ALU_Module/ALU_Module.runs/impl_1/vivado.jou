@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Apr 24 21:03:35 2021
-# Process ID: 26408
+# Start of session at: Fri Apr 30 10:38:24 2021
+# Process ID: 2220
 # Current directory: D:/vivadoprog/ALU_Module/ALU_Module.runs/impl_1
 # Command line: vivado.exe -log ALU_main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ALU_main.tcl -notrace
 # Log file: D:/vivadoprog/ALU_Module/ALU_Module.runs/impl_1/ALU_main.vdi
